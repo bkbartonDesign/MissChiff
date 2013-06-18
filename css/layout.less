@@ -1,0 +1,133 @@
+@blue: #0f6A98;
+@green: #4d934B;
+@orange: #F26721;
+@yellow: #CBB446;
+@purple: #501D3D;
+@grey: #F0FFF4;
+@red: #fe2e50;
+
+.border-radius(@radius){
+  -webkit-border-radius: @radius; 
+  -moz-border-radius: @radius; 
+  border-radius: @radius; 
+}
+
+.box-shadow(@horizontal:0; @vertical:0; @blur:1px; @spread:1px; @color:#000000;){
+	-moz-box-shadow:    @horizontal @vertical @blur @spread @color;
+	-webkit-box-shadow: @horizontal @vertical @blur @spread @color;
+	box-shadow:         @horizontal @vertical @blur @spread @color;
+
+}
+
+.background-image(@imageURL){
+  background: url(@imageURL) no-repeat center center ; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+body { background-color:@red;  }
+.btn { padding:10px 30px; color:#fff; letter-spacing:3px; .border-radius(3px); .box-shadow(@blur:2; @spread:0;); }
+
+.hero { 
+		 min-height:800px;
+		.background-image("../img/MissShoot8.jpg"); 
+			
+		/* SIBLINGS */
+			
+			.hero_wrapper {  } 
+
+/* 
+
+			.hero_content { 
+				text-align:center; 
+				margin-top:45%; 
+				}
+
+			.headline { 
+				color:#000000;
+				font-size:11em;
+				line-height:1em; 
+				display:block; 
+				}
+
+ */
+ 			.hero_content_position{
+ 				position:relative;
+ 			}
+ 			
+ 			
+			.hero_content { 
+				position:fixed;
+				bottom:5%;
+				left:20%;
+				opacity:1.0;				
+				}
+
+			.headline { 
+				color:#000000;
+				font-size:11em;
+				line-height:1em; 
+				display:block; 
+				z-index:1000;
+				opacity:1.0;
+				}
+			.nav { z-index:1000; opacity:1.0; }
+			
+			#facebook { background-color:@blue; }
+			#bandcamp { background-color:@green; }
+			#tumblr { background-color:@orange; }
+			#reverb { background-color:@yellow; }
+			#twitter { background-color:@purple; }
+	
+	}
+
+.about {
+			background-color:@red;
+			background: url('../img/withMic.jpg') no-repeat center center ;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+
+/*			background-image:url("../img/withMicRed.jpg") no-repeat center center; */
+			
+			height:750px;
+			
+			.overlay {
+				background-color:red;
+				width:100%;
+				height:100%;
+				opacity:0.50;
+				z-index:-50;
+			}
+			
+			.about_wrapper { 
+				padding:100px 0;
+				}
+			p { 
+				
+				font-size:16px; 
+				line-height:1.5em; 
+				margin-left:0px; 
+				letter-spacing:1px;
+				padding:15px;
+				font-weight:900;	
+				
+				}				
+			.textbox { background-color:red; text-align:bottom; }
+/* 			p { font-size:16px; line-height:1.5em; margin-left:-40px; letter-spacing:1px; } */
+		
+	}
+
+.footer {
+			.blackRule { min-width:100%; height:30px; background-color:#000; }
+	}
+
+
+
+
+
+

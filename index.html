@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>Your Page Title Here :)</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+  ================================================== -->
+	<link rel="stylesheet" href="./css/bootstrap.css">
+	<link rel="stylesheet/less" type="text/css" href="./css/layout.less" />
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+	
+	<!-- JavaScript
+	================================================== -->
+	<script src="js/libs/modernizr-2.5.3.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
+
+	<script type="text/javascript" src="//use.typekit.net/gcw7elu.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	<style>
+		.overlay { z-index:100000; background-color:#000; width:100%; height:100%; position:fixed; top:0; left:0; }
+	</style>
+
+	<script>		
+		$(document).ready(function(){
+			$("<div class='overlay'></div>").insertBefore("#main");	
+		})
+	</script>
+</head>
+<body>	
+	<div role="main" id="main">
+		<section class="hero">
+			<div class="container">
+				<div class="hero_wrapper">
+					<div class="hero_content">
+						<div class="tk-rowdy headline">MISS CHIFF</div>
+						<nav role="nav" class="nav">
+							<a class="btn" id="facebook" href="https://www.facebook.com/MissChiffChicago" target="_blank">FACEBOOK</a>
+							<a class="btn" id="bandcamp" href="http://misschiff.bandcamp.com/" target="_blank">BANDCAMP</a>		
+							<a class="btn" id="tumblr" href="http://misschiffchicago.tumblr.com/" target="_blank">TUMBLR</a>
+							<a class="btn" id="reverb" href="http://www.reverbnation.com/misschiff" target="_blank">REVERBNATION</a>		
+							<a class="btn" id="twitter" href="fonts.html" target="_blank">FONTS</a>
+<!-- 							<a class="btn" id="twitter" href="https://twitter.com/MissChiffMusic" target="_blank">TWITTER</a> -->
+						</nav>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="about">
+
+			<div class="container">
+				<div class="row about_wrapper">
+					<div class="span3 offset2">
+						<img class="img-polaroid" src="./img/closeUp.jpg" target="_blank" alt="">
+					</div>
+					<div class="span5 ">
+					<p class="textbox">
+						Telling the truth is often heart-wrenching, and Miss Chiff isn't afraid
+						to do so. Miss Chiff brings her emotions to the surface to lay naked
+						before you by combining rap and rhythm and blues. Sensitive lyrics
+						combined with industrial beats favor conventional rhythm with an
+						underground flair. She has molded original thoughts into music, creating
+						a voice for the underdogs, misfits, and individualists. 
+					</p>
+					
+					</div>					
+				</div>
+			</div>
+
+		</section>
+		
+	<footer role="footer" class="footer">
+		<div class="blackRule"></div>
+	</footer>
+
+	<script src="js/plugins.js"></script>
+	<script src="js/script.js"></script>
+	<script>	
+		window.onload = function() { $(".overlay").fadeOut(300); }
+	</script>
+
+<!-- 
+	<script>
+		var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+		g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+		s.parentNode.insertBefore(g,s)}(document,'script'));
+	</script>	
+ -->
+</body>
+</html>
