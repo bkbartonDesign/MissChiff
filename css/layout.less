@@ -1,8 +1,13 @@
 @blue: #0f6A98;
+@liteBlue: #179CCF;
 @green: #4d934B;
+@liteGreen: #59B959;
 @orange: #F26721;
+@liteOrange: #FF8333;
 @yellow: #CBB446;
+@liteYellow: #EEE156;
 @purple: #501D3D;
+@litePurple: #9E467D;
 @grey: #F0FFF4;
 @red: #fe2e50;
 
@@ -20,40 +25,69 @@
 }
 
 .background-image(@imageURL){
-  background: url(@imageURL) no-repeat center center ; 
+  background: url(@imageURL) no-repeat 0 center; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
 
+.css-gradient(@from: #20416A, @to: #3D69A5) {
+background-color: @to;
+background-image: -webkit-gradient(linear, left top, left bottom, from(@from),  to(@to));
+background-image: -webkit-linear-gradient(left, @from, @to);
+background-image: -moz-linear-gradient(left, @from, @to);
+background-image: -o-linear-gradient(left, @from, @to);
+background-image: -ms-linear-gradient(left, @from, @to);
+background-image: linear-gradient(left, @from, @to);
+}
 
-body { background-color:@red;  }
-.btn { padding:10px 30px; color:#fff; letter-spacing:3px; .border-radius(3px); .box-shadow(@blur:2; @spread:0;); }
+.transition (@value1,@value2:X,...)
+{
+    @value: ~`"@{arguments}".replace(/[\[\]]|\,\sX/g, '')`;
+
+    -webkit-transition: @value;
+    -moz-transition: @value;
+    -ms-transition: @value;
+    -o-transition: @value;
+    transition: @value;
+}
+
+body { background-color:@grey; font-family:"SoftSugarplainRegular", arial; font-weight:normal; .background-image("../img/largeBgEdit.jpg");  }
+.btn { padding:10px 30px; display:inline-block; color:#fff; letter-spacing:3px; .border-radius(3px); .box-shadow(@blur:2; @spread:0;); }
+
 
 .hero { 
-		 min-height:800px;
-		.background-image("../img/MissShoot8.jpg"); 
+		 min-height:770px;
+		 max-height:800px;
+		
 			
 		/* SIBLINGS */
 			
-			.hero_wrapper {  } 
+			.hero_wrapper { 
+			 max-width:800px;		
+			 } 
 
-/* 
+
 
 			.hero_content { 
-				text-align:center; 
-				margin-top:45%; 
+				text-align:center;
+				position:absolute;
+				bottom:20px;
+				left:50%;
+				margin-left:-460px;
 				}
 
-			.headline { 
+			h1 { 
+				margin:0;
 				color:#000000;
-				font-size:11em;
-				line-height:1em; 
-				display:block; 
+				font-size:12em;
+				line-height:0.7em; 
+				display:block;
+				font-weight:normal; 
 				}
 
- */
+ /*
  			.hero_content_position{
  				position:relative;
  			}
@@ -65,7 +99,7 @@ body { background-color:@red;  }
 				left:20%;
 				opacity:1.0;				
 				}
-
+*/
 			.headline { 
 				color:#000000;
 				font-size:11em;
@@ -74,60 +108,55 @@ body { background-color:@red;  }
 				z-index:1000;
 				opacity:1.0;
 				}
-			.nav { z-index:1000; opacity:1.0; }
+			
+			.nav { 
+				z-index:1000; 
+				opacity:1.0; 
+					
+					a { text-decoration:none; 	}
+				}
 			
 			#facebook { background-color:@blue; }
+			#facebook:hover { background-color:@liteBlue;}
 			#bandcamp { background-color:@green; }
+			#bandcamp:hover { background-color:@liteGreen; }
 			#tumblr { background-color:@orange; }
+			#tumblr:hover { background-color:@liteOrange; }			
 			#reverb { background-color:@yellow; }
+			#reverb:hover { background-color:@liteYellow; }			
 			#twitter { background-color:@purple; }
+			#twitter:hover { background-color:@litePurple; color:#000;}			
 	
 	}
 
-.about {
-			background-color:@red;
-			background: url('../img/withMic.jpg') no-repeat center center ;
-			-webkit-background-size: cover;
-			-moz-background-size: cover;
-			-o-background-size: cover;
-			background-size: cover;
+img.scale-with-grid {
+	max-width: 100%;
+	height: auto; }
 
-/*			background-image:url("../img/withMicRed.jpg") no-repeat center center; */
-			
-			height:750px;
-			
-			.overlay {
-				background-color:red;
-				width:100%;
-				height:100%;
-				opacity:0.50;
-				z-index:-50;
-			}
-			
-			.about_wrapper { 
-				padding:100px 0;
-				}
-			p { 
-				
-				font-size:16px; 
-				line-height:1.5em; 
-				margin-left:0px; 
-				letter-spacing:1px;
-				padding:15px;
-				font-weight:900;	
-				
-				}				
-			.textbox { background-color:red; text-align:bottom; }
-/* 			p { font-size:16px; line-height:1.5em; margin-left:-40px; letter-spacing:1px; } */
+.mobile { display:none; }
+
+
+@media (max-width: 960px){
+	
+	
+	
+	.hero {
 		
-	}
+		.hero_content { margin-top:60% }
+		h1 { font-size:8em; }
+		
+		
+		}
+	
+}
 
-.footer {
-			.blackRule { min-width:100%; height:30px; background-color:#000; }
-	}
+@media (max-width:840px){
+	
+	.btn { display:block; }
+}
 
+@media (max-width: 480px) {
 
-
-
-
-
+	.hero { background-position: 0 0; max-height:1000px; }
+	.mobile { display:block; }
+}
